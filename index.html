@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONVERSIONES</title>
+</head>
+<body>
+    <script>
+        var numero, u, d, c, decimal;
+        numero = parseInt( prompt( "Ingrese el numero octal: "));
+
+        c = parseInt( numero /100 );
+        d = parseInt(( numero % 100 ) /10);
+        u = (numero % 10 ) % 10;
+
+        if ( c<8 && d<8 && u<8 ){
+            decimal = (c * Math.pow(8,2)) + (d * Math.pow(8, 1)) +(u * Math.pow(8,0))
+            console.log( numero + " = " + decimal );
+
+        }else
+        console.log("Octal invalido" );
+    </script>
+    
+</body>
+</html>
